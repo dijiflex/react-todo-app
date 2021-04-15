@@ -10,7 +10,7 @@ function App() {
     const [todos, setTodos] = useState([]);
     const [input, setInput] = useState('');
 
-    // When the apploads, listen to the database and fetch new todos, as they get added 
+    //  When the apploads, listen to the database and fetch new todos, as they get added 
     useEffect(() => {
         // effect runs when the app loads
         db.collection('todos').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
